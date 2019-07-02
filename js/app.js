@@ -9,6 +9,6 @@ class Tomagotchi {
 	}
 }
 
-const game = {
+const yourTomagotchi = new Tomagotchi(tomagotchiName)
 
-}
+console.log(yourTomagotchi);
