@@ -1,5 +1,6 @@
 const tomagotchiName = prompt("Please enter your name", "Name of your Tomagotchi");
 
+
 class Tomagotchi {
 	constructor(tomagotchiName) {
 		this.name = tomagotchiName;
@@ -9,6 +10,11 @@ class Tomagotchi {
 	}
 }
 
+
+//instatiate the tomagotchi
 const yourTomagotchi = new Tomagotchi(tomagotchiName)
 
 console.log(yourTomagotchi);
+
+
+ 
