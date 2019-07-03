@@ -3,8 +3,8 @@
 }
 
 img {
-	width: 70px;
-	height: 70px;
+	width: 150px;
+	height: 150px;
 	border-radius: 50%;
 }
 
@@ -34,3 +34,26 @@ img {
   font-size: 16px;
  
 }
+
+h1 {
+ font-size: 25px;
+}
+h2 {
+ font-size: 25px;
+}
+h3 {
+ font-size: 25px;
+}
+h4 {
+ font-size: 25px;
+}
+
+
+
+
+
+
+
+
+
+

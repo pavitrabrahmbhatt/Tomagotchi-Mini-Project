@@ -1,3 +1,11 @@
+// $(document).ready(function() {
+//   $("#start-button").click(function() {
+//     $("#start-button").hide();
+//     tamagotchi = Object.create(Tamagotchi);
+//     tamagotchi.initialize(prompt("Name your Tamagotchi"));
+
+
+
 const tomagotchiName = prompt("Please enter your name", "Name of your Tomagotchi");
 
 
@@ -10,17 +18,17 @@ class Tomagotchi {
 	}
 
 	feed(player) {
- 		player.foodLevel += 1;
+ 		this.foodLevel += 1;
  		console.log("You pet is eating!");
  	}
 
  	sleep(player) {
- 		player.sleepLevel += 1;
+ 		this.sleepLevel += 1;
  		console.log("Your pet is going to sleep!");
  	}
 
  	play(player) {
- 		player.playLevel += 1;
+ 		this.playLevel += 1;
  		console.log("You are playing with your pet!");
  	}
 }
@@ -34,17 +42,18 @@ class Tomagotchi {
 
 const game = {
 
-	// start: function () {
-	// 	this.makeTomagatchi();
-	// 	this.timePasses();
-
-	// }
 	player: null,
+
+	start: function () {
+		this.makeTomagatchi()
+
+	},
 
 	makeTomagatchi: function () {
 		const yourTomagotchi = new Tomagotchi(tomagotchiName)
 		this.player = yourTomagotchi
 		console.log(this.player);
+
 	},
 
 	timePasses: function () {
@@ -59,35 +68,58 @@ const game = {
 
 	isLiving: function () {
 	    if (this.player.foodLevel <= 0 || this.player.playLevel <= 0 || this.player.sleepLevel <= 0) {
-	      return false;
+	     	return false;
 	    } else {
-	      return true;
+	     	return true;
 	    }
-	}
+	},
+
+
+
+	startTimer() {
+	    var timer = duration, minutes, seconds;
+	    setInterval(function () {
+	        minutes = parseInt(timer / 60, 10);
+	        seconds = parseInt(timer % 60, 10);
+
+	        minutes = minutes < 10 ? "0" + minutes : minutes;
+	        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+	        display.textContent = minutes + ":" + seconds;
+
+	        if (--timer < 0) {
+	            timer = duration;
+	        }
+	    }, 1000);
+	},
+
+	
+
 
 }
 
 
+game.start()
 
 
 
 
 
 
+$("#food-button").on('click', (e) => {
+    game.player.feed();
+    
+})
 
-// $("#food-button").click(function() {
-//     tamagotchi.foodUp();
-//     $("span#food-level").text(tamagotchi.foodLevel);
-//   })
-//   $("#play-button").click(function() {
-//     tamagotchi.playUp();
-//     $("span#play-level").text(tamagotchi.playLevel);
-//   })
-//   $("#sleep-button").click(function() {
-//     tamagotchi.sleepUp();
-//     $("span#sleep-level").text(tamagotchi.sleepLevel);
-//   })
+$("#play-button").on('click', (e) => {
+    game.player.play();
+    
+})
 
+$("#sleep-button").on('click', (e) => {
+    game.player.sleep();
+    
+})
 
 
 
