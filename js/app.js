@@ -43,17 +43,28 @@ class Tomagotchi {
 const game = {
 
 	player: null,
+	timer: 0,
+	intervalID: null,
+
 
 	start: function () {
 		this.makeTomagatchi()
 
 	},
 
+	startTimer: function() {
+		this.intervalID = setInterval(() => {	
+			this.timer++
+			this.timePasses()
+			console.log(this.timer);
+		}, 5000)
+	},
+
 	makeTomagatchi: function () {
 		const yourTomagotchi = new Tomagotchi(tomagotchiName)
 		this.player = yourTomagotchi
 		console.log(this.player);
-
+		this.startTimer()
 	},
 
 	timePasses: function () {
@@ -77,8 +88,6 @@ const game = {
 
 
 game.start()
-
-
 
 
 

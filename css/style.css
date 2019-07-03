@@ -21,6 +21,10 @@ img {
   padding-right: 50px;
  
 }
+#food-button {
+	width: 200px;
+	height: 150px;
+}
 
 .button2 {
   background-color: white;
