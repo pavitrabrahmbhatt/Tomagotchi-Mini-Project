@@ -10,37 +10,27 @@ img {
 
 .button1 {
   background-color: black;
-  border: white;
-  border-width: 10px;
   color: white;
-  
   text-align: center;
- 
   display: inline-block;
   font-size: 16px;
-  margin: 4px 2px;
+ 
 }
 
 .button2 {
   background-color: black;
-  border: none;
-  color: white;
-  
-  text-align: center;
- 
+  color: white;  
+  text-align: center; 
   display: inline-block;
   font-size: 16px;
-  margin: 4px 2px;
+ 
 }
 
 .button3 {
   background-color: black;
-  border: none;
-  color: white;
-  
+  color: white;  
   text-align: center;
-
   display: inline-block;
   font-size: 16px;
-  margin: 4px 2px;
+ 
 }
