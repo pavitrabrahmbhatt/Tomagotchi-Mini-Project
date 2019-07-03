@@ -11,17 +11,17 @@ class Tomagotchi {
 
 	feed(player) {
  		player.foodLevel += 1;
- 		return this.foodLevel
+ 		console.log("You pet is eating!");
  	}
 
  	sleep(player) {
  		player.sleepLevel += 1;
- 		return this.sleepLevel
+ 		console.log("Your pet is going to sleep!");
  	}
 
  	play(player) {
  		player.playLevel += 1;
- 		return this.playLevel
+ 		console.log("You are playing with your pet!");
  	}
 }
 
@@ -34,20 +34,31 @@ class Tomagotchi {
 
 const game = {
 
+	// start: function () {
+	// 	this.makeTomagatchi();
+	// 	this.timePasses();
+
+	// }
+	player: null,
+
 	makeTomagatchi: function () {
-		const yourTomagotchi = new Tomagotchi()
+		const yourTomagotchi = new Tomagotchi(tomagotchiName)
 		this.player = yourTomagotchi
+		console.log(this.player);
 	},
 
 	timePasses: function () {
-	    this.foodLevel = this.foodLevel - 1;
-	    this.playLevel = this.playLevel - 1;
-	    this.sleepLevel = this.sleepLevel - 1;
+	    this.player.foodLevel = this.player.foodLevel - 1;
+	    this.player.playLevel = this.player.playLevel - 1;
+	    this.player.sleepLevel = this.player.sleepLevel - 1;
+	    console.log(this.player.foodLevel);
+	    console.log(this.player.playLevel);
+	    console.log(this.player.sleepLevel);
 	},
 
 
 	isLiving: function () {
-	    if (this.foodLevel <= 0 || this.playLevel <= 0 || this.sleepLevel <= 0) {
+	    if (this.player.foodLevel <= 0 || this.player.playLevel <= 0 || this.player.sleepLevel <= 0) {
 	      return false;
 	    } else {
 	      return true;
@@ -57,7 +68,7 @@ const game = {
 }
 
 
-game.makeTomagatchi()
+
 
 
 
