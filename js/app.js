@@ -47,7 +47,7 @@ const game = {
 	player: null,
 	timer: 0,
 	intervalID: null,
-
+	isAlive: false,
 
 	start: function () {
 		this.makeTomagatchi()
@@ -55,17 +55,31 @@ const game = {
 	},
 
 	startTimer: function() {
-		this.intervalID = setInterval(() => {	
-			this.timer++
-			this.timePasses()
-			console.log(this.timer);
-		}, 5000)
+
+		if (this.isAlive === true){
+
+			this.intervalID = setInterval(() => {	
+				this.stopInterval()
+				this.timer++
+				this.timePasses()
+				this.isLiving()
+				console.log(this.timer);
+			}, 1000)
+        } 
+	},
+
+	stopInterval: function () {
+		if (this.isAlive === false){
+			clearInterval(this.intervalID)
+			console.log (`YOU KILLED ${this.player.name}!!!!`)
+		}
 	},
 
 	makeTomagatchi: function () {
 		const yourTomagotchi = new Tomagotchi(tomagotchiName)
 		this.player = yourTomagotchi
 		console.log(this.player);
+		this.isAlive = true
 		this.startTimer()
 	},
 
@@ -73,7 +87,7 @@ const game = {
 	    this.player.foodLevel = this.player.foodLevel - 1;
 	    this.player.playLevel = this.player.playLevel - 1;
 	    this.player.sleepLevel = this.player.sleepLevel - 1;
-	    this.player.age = this.player.sleepLevel + 1;
+	    this.player.age = this.player.age + 1;
 	    $('#myBar4').text(this.player.foodLevel);
 	    $('#myBar1').text(this.player.playLevel);
 	    $('#myBar2').text(this.player.sleepLevel);
@@ -84,10 +98,9 @@ const game = {
 
 	isLiving: function () {
 	    if (this.player.foodLevel <= 0 || this.player.playLevel <= 0 || this.player.sleepLevel <= 0) {
-	     	return false;
-	    } else {
-	     	return true;
-	    }
+	     	this.isAlive = false;
+	    } 
+	    console.log(this.isAlive);
 	}
 }
 

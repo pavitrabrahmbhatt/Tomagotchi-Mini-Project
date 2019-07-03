@@ -1,5 +1,23 @@
 .container {
 	background-color: lightsteelblue;
+	display:inline flex;
+	width: 700px;
+	border-top: 10px solid black;
+	border-left: 10px solid black;
+	border-right: 10px solid black;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.container1 {
+	background-color: lightsteelblue;
+	display:inline flex;
+	width:700px;
+	border-bottom: 10px solid black;
+	border-left: 10px solid black;
+	border-right: 10px solid black;
+	justify-content: space-around;
+
 }
 
 img {
@@ -15,11 +33,8 @@ img {
   
   color: white;
   text-align: center;
-  display: inline-block;
   font-size: 16px;
-  padding-left: 50px;
-  padding-right: 50px;
- 
+   
 }
 #food-button {
 	width: 125px;
@@ -43,44 +58,72 @@ img {
   
   color: white;  
   text-align: center; 
-  display: inline-block;
+ 
   font-size: 16px;
-  padding-left: 50px;
-  padding-right: 50px;
+  
 }
 
 .button3 {
   
   color: white;  
   text-align: center;
-  display: inline-block;
+  
   font-size: 16px;
-  padding-left: 30px;
-  padding-right:50px;
+  
  
 }
 
-h1 {
- font-size: 25px;
+/*h1 {
+ font-size: 20px;
  color:white;
+ align-items: center;
+ 
 }
 h2 {
- font-size: 25px;
+ font-size: 20px;
  color:white;
+ align-items: center;
+ 
 }
 h3 {
- font-size: 25px;
+ font-size: 20px;
  color: white;
+ align-items: center;
+ 
 }
 h4 {
- font-size: 25px;
+ font-size: 20px;
  color:white;
+ align-items: center;
+ 
+}
+
+
+#myBar4 {
+	font-size: 25px;
+	align-items: center;
+	
+}
+
+#myBar1 {
+	font-size: 25px;
+	align-items: center;
+	
+}
+#myBar2 {
+	font-size: 25px;
+	align-items: center;
+	
+}
+#myBar3 {
+	font-size: 25px;
+	align-items: center;
+	
 }
 
 
 
-
-
+*/
 
 
 
