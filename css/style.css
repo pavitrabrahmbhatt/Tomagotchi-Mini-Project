@@ -12,7 +12,7 @@ img {
 }
 
 .button1 {
-  background-color: white;
+  
   color: white;
   text-align: center;
   display: inline-block;
@@ -22,12 +22,25 @@ img {
  
 }
 #food-button {
-	width: 200px;
-	height: 150px;
+	width: 125px;
+	height: 40px;
+	font-size: 20px;
+}
+
+#play-button {
+	width: 125px;
+	height: 40px;
+	font-size: 20px;
+}
+
+#sleep-button {
+	width: 125px;
+	height: 40px;
+	font-size: 20px;
 }
 
 .button2 {
-  background-color: white;
+  
   color: white;  
   text-align: center; 
   display: inline-block;
@@ -37,7 +50,7 @@ img {
 }
 
 .button3 {
-  background-color: white;
+  
   color: white;  
   text-align: center;
   display: inline-block;

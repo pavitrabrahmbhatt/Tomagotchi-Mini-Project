@@ -15,6 +15,8 @@ class Tomagotchi {
 		this.foodLevel = 10;
     	this.playLevel = 10;
     	this.sleepLevel = 10;
+    	this.age = 0;
+
 	}
 
 	feed(player) {
@@ -71,9 +73,12 @@ const game = {
 	    this.player.foodLevel = this.player.foodLevel - 1;
 	    this.player.playLevel = this.player.playLevel - 1;
 	    this.player.sleepLevel = this.player.sleepLevel - 1;
-	    console.log(this.player.foodLevel);
-	    console.log(this.player.playLevel);
-	    console.log(this.player.sleepLevel);
+	    this.player.age = this.player.sleepLevel + 1;
+	    $('#myBar4').text(this.player.foodLevel);
+	    $('#myBar1').text(this.player.playLevel);
+	    $('#myBar2').text(this.player.sleepLevel);
+	    $('#myBar3').text(this.player.age);
+	    
 	},
 
 
