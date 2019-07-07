@@ -64,7 +64,7 @@ const game = {
 				this.timePasses()
 				this.isLiving()
 				console.log(this.timer);
-			}, 1000)
+			}, 5000)
         } 
 	},
 

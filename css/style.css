@@ -73,7 +73,13 @@ img {
  
 }
 
-/*h1 {
+.buttonContainer {
+	background-color: white;
+	display: inline-flex;
+
+}
+
+h1 {
  font-size: 20px;
  color:white;
  align-items: center;
@@ -95,8 +101,8 @@ h4 {
  font-size: 20px;
  color:white;
  align-items: center;
- 
 }
+
 
 
 #myBar4 {
@@ -123,7 +129,7 @@ h4 {
 
 
 
-*/
+
 
 
 
