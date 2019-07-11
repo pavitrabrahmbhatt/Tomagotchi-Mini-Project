@@ -1,7 +1,7 @@
 .container {
 	background-color: lightsteelblue;
 	display:inline flex;
-	width: 700px;
+	width: 1250px;
 	border-top: 10px solid black;
 	border-left: 10px solid black;
 	border-right: 10px solid black;
@@ -12,20 +12,32 @@
 .container1 {
 	background-color: lightsteelblue;
 	display:inline flex;
-	width:700px;
+	width:1250px;
 	border-bottom: 10px solid black;
 	border-left: 10px solid black;
 	border-right: 10px solid black;
 	justify-content: space-around;
 
 }
+#imagE {
+	background-color: lightgreen;
+	width: 100%;
+	height: 300px;
+	position: relative;
+    border; 1px solid green;
+    background: yellow;
+    
+}
 
-img {
+#image {
 	width: 125px;
 	height: 125px;
 	border-radius: 50%;
 	padding-top: 110px;
 	padding-bottom: 35px;
+	position: relative;
+    border; 1px solid green;
+    background: yellow;
 
 }
 
@@ -127,6 +139,11 @@ h4 {
 	
 }
 
+#death {
+ font-size: 100px;
+ color:black;
+ text-align: center;
+ 
 
 
 

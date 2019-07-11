@@ -5,7 +5,7 @@
 //     tamagotchi.initialize(prompt("Name your Tamagotchi"));
 
 
-
+$("#death").hide()
 const tomagotchiName = prompt("Please enter your name", "Name of your Tomagotchi");
 
 
@@ -49,8 +49,35 @@ const game = {
 	intervalID: null,
 	isAlive: false,
 
+
+	animate: function () {
+
+		$(document).ready(function(e) {
+    	let width = $(document).width();
+
+	    function goRight() {
+	        $("#image").animate({
+	        left: width
+	      }, 5000, function() {
+	         setTimeout(goLeft, 50);
+	      });
+	    }
+	    function goLeft() {
+	        $("#image").animate({
+	        left: 0
+	      }, 5000, function() {
+	         setTimeout(goRight, 50);
+	      });
+	    }
+
+	    setTimeout(goRight, 50);
+	});
+
+	},
+
 	start: function () {
 		this.makeTomagatchi()
+		this.animate()
 
 	},
 
@@ -64,7 +91,7 @@ const game = {
 				this.timePasses()
 				this.isLiving()
 				console.log(this.timer);
-			}, 5000)
+			}, 1000)
         } 
 	},
 
@@ -72,6 +99,11 @@ const game = {
 		if (this.isAlive === false){
 			clearInterval(this.intervalID)
 			console.log (`YOU KILLED ${this.player.name}!!!!`)
+			$("#imagE").hide()
+			$("#food-button").hide()
+			$("#sleep-button").hide()
+			$("#play-button").hide()
+			$("#death").show()
 		}
 	},
 
@@ -97,7 +129,7 @@ const game = {
 
 
 	isLiving: function () {
-	    if (this.player.foodLevel <= 0 || this.player.playLevel <= 0 || this.player.sleepLevel <= 0) {
+	    if (this.player.foodLevel === 0 || this.player.playLevel === 0 || this.player.sleepLevel === 0) {
 	     	this.isAlive = false;
 	    } 
 	    console.log(this.isAlive);
