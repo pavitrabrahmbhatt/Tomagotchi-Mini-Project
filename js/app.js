@@ -116,9 +116,11 @@ const game = {
 	},
 
 	timePasses: function () {
-	    this.player.foodLevel = this.player.foodLevel - 1;
-	    this.player.playLevel = this.player.playLevel - 1;
-	    this.player.sleepLevel = this.player.sleepLevel - 1;
+		if (this.player.foodLevel > 0 && this.player.playLevel > 0 && this.player.sleepLevel > 0) {
+			this.player.playLevel = this.player.playLevel - 1;
+	    	this.player.sleepLevel = this.player.sleepLevel - 1;
+	    	this.player.foodLevel = this.player.foodLevel - 1;
+	    }
 	    this.player.age = this.player.age + 1;
 	    $('#myBar4').text(this.player.foodLevel);
 	    $('#myBar1').text(this.player.playLevel);
